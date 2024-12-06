@@ -17,11 +17,12 @@ const UsersComponent = () => {
         console.log(userData)
     },[userData])
   return (
-    <div>
+    <div className='p-3'>
         {userData?.map(user=>(
-            <div className='w-4/12 flex border'>
-            <div className=''>
-                <h2>{user.name}</h2><br /> <span>{user.username}</span>
+            
+        <div className='w-full flex flex-col  border my-2'>
+            <div className='p-2'>
+                <h2>{user.name}</h2><br /> <span>@{user.username}</span>
             </div>
 
             <button className='bg-blue-700 text-white rounded-md shadow-md px-4'>

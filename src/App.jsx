@@ -3,7 +3,7 @@ import PostComponent from "./components/postComponent";
 
 function App() {
   return (
-    <div>
+    <div className=" md:flex ">
       <UsersComponent />
       <PostComponent />
     </div>
