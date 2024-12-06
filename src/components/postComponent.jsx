@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const PostComponent = () => {
-  const [postData, setPostData] = useState();
+  const [postData, setPostData] = useState(null);
   const url = "https://jsonplaceholder.typicode.com/posts";
   useEffect(() => {
     axios
@@ -15,9 +15,6 @@ const PostComponent = () => {
       });
   }, []);
 
-  useEffect(()=>{
-      console.log(postData)
-  },[postData])
   return (
     <div className="p-6">
       {postData?.slice(0, 10).map((post) => (
